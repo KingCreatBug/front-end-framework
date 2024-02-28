@@ -1,0 +1,263 @@
+<style>
+    body {
+        background-image: url(./img/h1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<section>
+    <div class="col-lg-8 m-auto">
+        <div class="card card-cascade narrower">
+            <div
+                class="view view-cascade gradient-card-header"
+                style="
+                    background-image: url(./img/h2.gif);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                "
+            >
+                <h2 class="card-header-title">Register</h2>
+                <p>Register if you don't have an account yet</p>
+            </div>
+
+            <div
+                class="card-body card-body-cascade p-5"
+                ng-init="studentR.gender='true';studentR.marks='0'"
+            >
+                <form name="frmRegister">
+                    <div class="md-form md-outline">
+                        <i class="fas fa-user prefix blue-text"></i>
+                        <input
+                            name="username"
+                            ng-model="studentR.username"
+                            type="text"
+                            id="username"
+                            class="form-control border-indigo"
+                            required
+                            minlength="6"
+                        />
+                        <label
+                            class="bg-white blue-text rounded px-2 ml-5"
+                            for="username"
+                        >
+                            <strong>Registered name</strong>
+                        </label>
+                        <small
+                            ng-show="frmRegister.username.$error.required"
+                            class="form-text text-danger"
+                        >
+                            Please enter your account name
+                        </small>
+                        <small
+                            ng-show="frmRegister.username.$error.minlength"
+                            class="form-text text-danger"
+                        >
+                            Account name must be more than 6 characters
+                        </small>
+                    </div>
+
+                    <div class="md-form md-outline">
+                        <i class="fas fa-lock prefix blue-text"></i>
+                        <input
+                            minlength="6"
+                            name="password"
+                            ng-model="studentR.password"
+                            type="password"
+                            id="password"
+                            class="form-control border-indigo"
+                            required
+                        />
+                        <label
+                            class="bg-white blue-text rounded px-2 ml-5"
+                            for="password"
+                        >
+                            <strong>Password</strong>
+                        </label>
+                        <small
+                            ng-show="frmRegister.password.$error.required"
+                            id="password"
+                            class="form-text text-danger"
+                        >
+                            Please enter your password
+                        </small>
+                        <small
+                            ng-show="frmRegister.password.$error.minlength"
+                            id="password"
+                            class="form-text text-danger"
+                        >
+                            Password must be more than 6 characters
+                        </small>
+                    </div>
+
+                    <div class="md-form md-outline">
+                        <i class="fas fa-lock prefix blue-text"></i>
+                        <input
+                            name="repassword"
+                            ng-model="repassword"
+                            type="password"
+                            id="repassword"
+                            class="form-control border-indigo"
+                            required
+                            re-pass
+                        />
+                        <label
+                            class="bg-white blue-text rounded px-2 ml-5"
+                            for="repassword"
+                        >
+                            <strong>Re-password</strong>
+                        </label>
+                        <small
+                            ng-show="frmRegister.repassword.$error.required"
+                            class="form-text text-danger"
+                        >
+                            Please re-enter your password
+                        </small>
+                        <small
+                            ng-show="frmRegister.repassword.$invalid && !frmRegister.repassword.$error.required"
+                            class="form-text text-danger"
+                        >
+                            The re-entered password does not match
+                        </small>
+                    </div>
+
+                    <div class="md-form md-outline">
+                        <i class="fas fa-signature prefix blue-text"></i>
+                        <input
+                            name="fullname"
+                            ng-model="studentR.fullname"
+                            type="text"
+                            id="fullname"
+                            class="form-control border-indigo"
+                            required
+                            minlength="5"
+                        />
+                        <label
+                            class="bg-white blue-text rounded px-2 ml-5"
+                            for="fullname"
+                        >
+                            <strong>Full name</strong>
+                        </label>
+                        <small
+                            ng-show="frmRegister.fullname.$error.required"
+                            id="fullname"
+                            class="form-text text-danger"
+                        >
+                            Please enter your full name
+                        </small>
+                        <small
+                            ng-show="frmRegister.fullname.$error.minlength"
+                            id="fullname"
+                            class="form-text text-danger"
+                        >
+                            Cannot be less than 5 characters
+                        </small>
+                    </div>
+
+                    <div class="md-form md-outline">
+                        <i class="far fa-envelope prefix blue-text"></i>
+                        <input
+                            name="email"
+                            ng-model="studentR.email"
+                            type="email"
+                            id="email"
+                            class="form-control border-indigo"
+                            required
+                        />
+                        <label
+                            class="bg-white blue-text rounded px-2 ml-5"
+                            for="email"
+                        >
+                            <strong>Email</strong>
+                        </label>
+                        <small
+                            ng-show="frmRegister.email.$error.required"
+                            class="form-text text-danger"
+                            >Please enter your email</small
+                        >
+                        <small
+                            ng-show="frmRegister.email.$error.email"
+                            class="form-text text-danger"
+                        >
+                            Incorrect email format
+                        </small>
+                    </div>
+
+                    <label class="bg-white blue-text rounded px-2" for="">
+                        <i class="fas fa-transgender"></i>
+                        Sex:
+                    </label>
+                    <div class="form-check form-check-inline">
+                        <input
+                            ng-model="studentR.gender"
+                            type="radio"
+                            class="form-check-input"
+                            id="gender"
+                            name="gender"
+                            value="true"
+                        />
+                        <label class="form-check-label blue-text" for="gender">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input
+                            ng-model="studentR.gender"
+                            type="radio"
+                            class="form-check-input"
+                            id="gender2"
+                            name="gender"
+                            value="false"
+                        />
+                        <label class="form-check-label blue-text" for="gender2">
+                            Female
+                        </label>
+                    </div>
+
+                    <div class="md-form md-outline">
+                        <i class="far fa-envelope prefix blue-text"></i>
+                        <input
+                            name="birthday"
+                            ng-model="studentR.birthday"
+                            type="text"
+                            id="birthday"
+                            class="form-control border-indigo"
+                            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                            required
+                        />
+                        <label
+                            class="bg-white blue-text rounded px-2 ml-5"
+                            for="birthday"
+                        >
+                            <strong>Birth of day(yyyy-mm-dd)</strong>
+                        </label>
+                        <small
+                            ng-show="frmRegister.birthday.$error.required"
+                            class="form-text text-danger"
+                        >
+                            Please enter date of birth
+                        </small>
+                        <small
+                            ng-show="frmRegister.birthday.$error.pattern"
+                            class="form-text text-danger"
+                        >
+                            Incorrect date of birth format
+                        </small>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button
+                            ng-click="register()"
+                            ng-disabled="frmRegister.$invalid"
+                            class="btn btn-indigo text-white btn-rounded"
+                        >
+                            Register enter
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,92 @@
+<style>
+    body {
+        background-image: url(./img/h1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+</style>
+<section>
+    <div class="col-lg-5 m-auto">
+        <div class="card card-cascade narrower">
+            <div
+                class="view view-cascade gradient-card-header"
+                style="
+                    background-image: url(./img/h2.gif);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                "
+            >
+                <h2 class="card-header-title">Log in</h2>
+                <p>Please enter your account password</p>
+            </div>
+
+            <div class="card-body card-body-cascade px-5 py-3">
+                <form name="frmLogin" id="frmLogin">
+                    <div class="md-form md-outline">
+                        <i class="fas fa-user prefix blue-text"></i>
+                        <input
+                            name="username"
+                            ng-model="username"
+                            type="text"
+                            id="username"
+                            class="form-control border-primary"
+                            required
+                            maxlength="25"
+                        />
+                        <label
+                            class="bg-white blue-text rounded px-2 ml-5"
+                            for="username"
+                        >
+                            <strong>Account</strong>
+                        </label>
+                        <small
+                            ng-show="frmLogin.username.$invalid"
+                            id="username"
+                            class="form-text text-danger"
+                        >
+                            Please enter account
+                        </small>
+                    </div>
+
+                    <div class="md-form md-outline">
+                        <i class="fas fa-lock prefix blue-text"></i>
+                        <input
+                            name="password"
+                            ng-model="password"
+                            type="password"
+                            id="password"
+                            class="form-control border-primary"
+                            required
+                            maxlength="25"
+                        />
+                        <label
+                            class="bg-white blue-text rounded px-2 ml-5"
+                            for="password"
+                        >
+                            <strong>Password</strong>
+                        </label>
+                        <small
+                            ng-show="frmLogin.password.$invalid"
+                            id="password"
+                            class="form-text text-danger"
+                            >Please enter your password</small
+                        >
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button
+                            ng-click="login()"
+                            ng-disabled="frmLogin.$invalid"
+                            class="btn blue-gradient btn-rounded"
+                        >
+                            Login
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

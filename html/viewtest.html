@@ -1,0 +1,127 @@
+<style>
+    body {
+        background-image: url(../img/h1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>
+<section class="px-5 py-4 rgba-white-strong rounded shadow">
+    <h2 class="h1-responsive font-weight-bold text-center">{{subject.Name}}</h2>
+    <p class="grey-text text-center w-responsive mx-auto mb-5"></p>
+
+    <div class="row">
+        <div class="col-lg-5 mb-lg-0 mb-5">
+            <img
+                src="img/logos/{{subject.Logo}}"
+                alt="Sample project image"
+                class="img-fluid rounded z-depth-1"
+                style="width: 300px"
+            />
+        </div>
+
+        <div class="col-lg-7">
+            <div class="row mb-3">
+                <div class="col-md-1 col-2">
+                    <i class="fas fa-book fa-2x blue-text"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h3 class="font-weight-bold mb-3">Knowledge</h3>
+                    <p>
+                        Candidates must ensure that they have fully reviewed the
+                        knowledge during the process study
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-1 col-2">
+                    <i class="fas fa-code fa-2x red-text"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h3 class="font-weight-bold mb-3">Skill</h3>
+                    <p>
+                        Apply knowledge to practice by answering examples
+                        according to sample code
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1 col-2">
+                    <i class="far fa-money-bill-alt fa-2x yellow-text"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h3 class="font-weight-bold mb-3">Re-study fee</h3>
+                    <p class="mb-0">
+                        Candidates will have to pay to retake the subject if
+                        they do not pass the exam point.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5" />
+
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="row mb-3">
+                <div class="col-md-1 col-2">
+                    <i
+                        class="fas fa-american-sign-language-interpreting fa-2x indigo-text"
+                    ></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h3 class="font-weight-bold mb-3">Fair</h3>
+                    <p>
+                        Candidates must ensure honesty during the exam process
+                        how to use the knowledge learned.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-1 col-2">
+                    <i class="fas fa-check-double fa-2x pink-text"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h3 class="font-weight-bold mb-3">Achievements</h3>
+                    <p>
+                        Performance in the test will be evaluated, recorded and
+                        Bonus.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mb-lg-0 mb-5">
+                <div class="col-md-1 col-2">
+                    <i class="far fa-grin fa-2x blue-text"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h3 class="font-weight-bold mb-3">Tips</h3>
+                    <p class="mb-0">
+                        Candidates should do the easy questions first so they
+                        don't lose too much lots of time for a difficult
+                        question.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5 view overlay">
+            <img
+                src="img/start.gif"
+                alt="Sample project image"
+                class="img-fluid rounded z-depth-1"
+                style="width: 100%"
+            />
+            <a ng-click="test()">
+                <div
+                    class="mask waves-effect waves-light rgba-white-slight"
+                ></div>
+            </a>
+        </div>
+    </div>
+</section>
